@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">{{ title }}</h2>
+
+  <nav class="mb-4">
+    <ul class="list-unstyled d-inline-flex flex-wrap gap-2">
+      <li><a [routerLink]="['/add-police']" class="btn btn-primary">Add Police</a></li>
+      <li><a [routerLink]="['/view-police']" class="btn btn-primary">View Police</a></li>
+      <li><a [routerLink]="['/add-plushie']" class="btn btn-primary">Add Plushie</a></li>
+      <li><a [routerLink]="['/view-plushie']" class="btn btn-primary">View Plushies</a></li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

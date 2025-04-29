@@ -1,0 +1,10 @@
+<h3>Add Plushie</h3>
+<input [(ngModel)]="plushie.name" placeholder="Name">
+<input [(ngModel)]="plushie.price" placeholder="Price" type="number">
+<input [(ngModel)]="plushie.quantity" placeholder="Quantity" type="number">
+
+<select [(ngModel)]="plushie.employeeName">
+  <option *ngFor="let p of policeList" [value]="p.name">{{ p.name }}</option>
+</select>
+
+<button (click)="save()">Add Plushie</button>

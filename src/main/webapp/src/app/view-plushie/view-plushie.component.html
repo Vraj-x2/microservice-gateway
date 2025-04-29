@@ -1,0 +1,17 @@
+<h3>All Plushies</h3>
+<table>
+  <tr>
+    <th>Name</th><th>Price</th><th>Quantity</th><th>Employee</th><th>Actions</th>
+  </tr>
+  <tr *ngFor="let p of plushies">
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+    <td>{{p.employeeName}}</td>
+    <td>
+      <button (click)="delete(p.id!)">Delete</button>
+      <button (click)="purchase(p)" [disabled]="p.quantity === 0">Buy</button>
+      <span *ngIf="p.quantity === 0">Sold Out</span>
+    </td>
+  </tr>
+</table>
